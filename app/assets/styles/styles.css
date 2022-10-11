@@ -1,8 +1,14 @@
 @import "normalize.css";
-@import "modules/_vars.css";
+@import "global/_vars.css";
+@import "global/_mixins.css";
 @import "modules/_large-hero.css";
-@import "modules/_global-rules.css";
+@import "global/_global-rules.css";
 @import "modules/_btn.css";
+@import "global/_wrapper.css";
+@import "global/_page-section.css";
+@import "modules/_heading.css";
+@import "global/_container.css";
+@import "modules/_card.css";
 
 
 

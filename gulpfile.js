@@ -5,16 +5,21 @@ cssImport = require('postcss-import'),
 nested = require('postcss-nested'),
 cssvars = require('postcss-simple-vars'),
 postcss = require('gulp-postcss'),
-watch = require('gulp-watch');
+watch = require('gulp-watch'),
+mixins = require('postcss-mixins');
 
 
 gulp.task('Reload', () => {
-    browserSync.reload();
+    
 });
 
 gulp.task('sass', () => {
     return gulp.src("./app/assets/styles/styles.css")
-        .pipe(postcss([cssImport, nested, cssvars, autoprefixer]))
+        .pipe(postcss([cssImport, mixins, nested, cssvars, autoprefixer]))
+        .on('error', (errorInfo) => {
+            console.log(errorInfo.toString());
+            this.imit('end');
+        })
         .pipe(gulp.dest("./app/temp/styles"))
         .pipe(browserSync.stream());
 });
@@ -28,7 +33,9 @@ gulp.task('watch', () => {
         }
     });
 
-    watch('./app/index.html', gulp.series('Reload')),
+    watch('./app/index.html', gulp.series(() => {
+        browserSync.reload();
+    })),
     watch('./app/assets/styles/**/*.css', gulp.series('sass'));
 });
 

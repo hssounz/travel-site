@@ -1,0 +1,17 @@
+.page-section{
+    padding: 1.2rem 0;
+
+    &--blue{
+        background-color: $mainBlue;
+        color: #fff;
+    }
+
+    &&--trans{
+        /* background-image: url("/app/assets/images/testimonials-bg.jpg"); */
+        background-color: rgb(99, 199, 242);
+    }
+
+    @mixin atMedium{
+        padding: 4.5rem 0;
+    }
+}

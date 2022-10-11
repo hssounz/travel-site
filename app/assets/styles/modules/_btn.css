@@ -1,17 +1,45 @@
 .btn {
     display: inline-block;
     text-decoration: none;
-    padding: .75rem 1.2rem;
+    padding: .25rem .4rem;
+    font-size: .25rem;
     color: #fff;
     background-color: $mainBlue;
+
+    @mixin atSmall {
+        padding: .45rem .62rem;
+        font-size: .5rem;
+    }
+    @mixin atMedium {
+        padding: .6rem .9rem;
+        font-size: .75rem;
+    }
+    @mixin atLarge {
+        padding: .75rem 1.2rem;
+        font-size: 1rem;
+    }
 
     &--orange {
         background-color: $mainOrange;
     }
 
     &--large {
-        padding: 1.1rem 1.9rem;
-        font-size: 1.25rem;
+        padding: .9rem 1.5rem;
+        font-size: 1rem;
+
+        /* @mixin atSmall {
+            padding: .6rem 1.1rem;
+            font-size: .75rem;
+        }
+        @mixin atMedium {
+            padding: .9rem 1.5rem;
+            font-size: 1rem;
+        } */
+
+        @mixin atLarge {
+            padding: 1.1rem 1.9rem;
+            font-size: 1.25rem;
+        }
     }
 
 }

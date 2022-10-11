@@ -18,7 +18,8 @@
   "homepage": "https://github.com/hssounz/travel-site#readme",
   "dependencies": {
     "jquery": "^3.6.1",
-    "normalize.css": "^8.0.1"
+    "normalize.css": "^8.0.1",
+    "postcss-mixins": "^9.0.4"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.12",
