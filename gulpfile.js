@@ -8,11 +8,7 @@ postcss = require('gulp-postcss'),
 watch = require('gulp-watch'),
 mixins = require('postcss-mixins');
 
-
-gulp.task('Reload', () => {
-    
-});
-
+//RENDRING SASS TO CSS
 gulp.task('sass', () => {
     return gulp.src("./app/assets/styles/styles.css")
         .pipe(postcss([cssImport, mixins, nested, cssvars, autoprefixer]))
@@ -24,6 +20,8 @@ gulp.task('sass', () => {
         .pipe(browserSync.stream());
 });
 
+
+//GULP WATCH - RELOAD AND STREAMING
 gulp.task('watch', () => {
 
     browserSync.init({
