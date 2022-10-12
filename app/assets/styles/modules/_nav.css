@@ -1,0 +1,66 @@
+.nav{
+    padding: .5rem;
+    width: 100%;
+    height: auto;
+    position: fixed;
+    z-index: 5555;
+    background-color: #2f557276;
+
+
+    &__img{
+        background-color: $mainBlue;
+        width: 5rem;
+        padding: 2rem 1rem;
+        position: absolute; left: 8rem;
+
+    }
+
+    &__list{
+        font-size: 0.8rem;
+        float: right;
+        list-style: none;
+        margin-top: 1rem;
+        margin-right: 5rem;
+        display: flex;
+        float: right;
+        gap: 2rem;
+
+        a{  
+            padding: .5rem 2rem;
+            border: solid 1px transparent;
+            text-decoration: none;
+            color: #fff;
+            font-weight: 300;
+           
+
+            &:hover{
+                border: solid 1px #fff;
+                border-radius: 18rem;
+                box-shadow: 0px 2px 0 $mainBlue;
+            }
+            
+        }
+    }
+
+    &__btn{
+        display: inline-block;
+        float: right;
+        margin-top: .5rem;
+        margin-right: 10rem;
+        text-decoration: none;
+        padding: .25rem .8rem;
+        font-size: 1.5rem;
+        color: #fff;
+        background-color: $mainBlue;
+
+        &:hover{
+            background-color: transparent;
+            color: $mainBlue;
+        }
+
+        @mixin atMedium{
+            padding: .5rem 1.8rem;
+            font-size: 1rem;
+        }
+    }
+}

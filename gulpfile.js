@@ -6,13 +6,10 @@ nested = require('postcss-nested'),
 cssvars = require('postcss-simple-vars'),
 postcss = require('gulp-postcss'),
 watch = require('gulp-watch'),
+svgSprite = require('gulp-svg-sprite'),
 mixins = require('postcss-mixins');
 
-
-gulp.task('Reload', () => {
-    
-});
-
+// RENDRING SASS INTO CSS
 gulp.task('sass', () => {
     return gulp.src("./app/assets/styles/styles.css")
         .pipe(postcss([cssImport, mixins, nested, cssvars, autoprefixer]))
@@ -24,6 +21,22 @@ gulp.task('sass', () => {
         .pipe(browserSync.stream());
 });
 
+let config = {
+    mode: {
+        css: {
+            
+        }
+    }
+}
+
+gulp.task('createSprite', () => {
+    return gulp.src('./app/assets/images/icons/**/*.svg')
+            .pipe(svgSprite(config))
+            .pipe(gulp.dest('./app/temp/sprite/'));
+
+})
+
+//GULP WATCH - RELOAD AND STREAMING
 gulp.task('watch', () => {
 
     browserSync.init({
