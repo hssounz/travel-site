@@ -6,9 +6,33 @@
         color: #fff;
     }
 
-    &&--trans{
-        /* background-image: url("/app/assets/images/testimonials-bg.jpg"); */
-        background-color: rgb(99, 199, 242);
+    &--trans{
+        background: url('/assets/images/testimonials-bg.jpg') top center;
+        background-size: cover;
+    }
+
+
+    &--title{
+        font-size: 2.75rem;
+        font-weight: 200;
+        text-align: center;
+
+        &-icon{
+            width: 2.75rem;
+            @mixin atMedium{
+                width: 3.75rem;
+            }
+        }
+
+        &-blue{
+            color: $mainBlue;
+        }
+
+        @mixin atMedium {
+            font-size: 3.75rem;
+        }
+
+
     }
 
     @mixin atMedium{

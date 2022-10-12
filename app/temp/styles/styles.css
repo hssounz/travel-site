@@ -502,6 +502,11 @@ img {
             padding-right: 4rem
     }}
 
+.wrapper__testo{
+        max-width: 1200px;
+
+    }
+
 .page-section{
     padding: 1.2rem 0;
 }
@@ -511,10 +516,38 @@ img {
         color: #fff;
     }
 
-.page-section.page-section--trans{
-        /* background-image: url("/app/assets/images/testimonials-bg.jpg"); */
-        background-color: rgb(99, 199, 242);
+.page-section--trans{
+        background: url('/assets/images/testimonials-bg.jpg') top center;
+        background-size: cover;
     }
+
+.page-section--title{
+        font-size: 2.75rem;
+        font-weight: 200;
+        text-align: center;
+
+
+    }
+
+.page-section--title-icon{
+            width: 2.75rem;
+        }
+
+@media (min-width: 800px){
+
+.page-section--title-icon{
+                width: 3.75rem
+        }}
+
+.page-section--title-blue{
+            color: #2f5572;
+        }
+
+@media (min-width: 800px){
+
+.page-section--title {
+            font-size: 3.75rem;
+  }}
 
 @media (min-width: 800px){
 
@@ -602,14 +635,13 @@ img {
     gap: 3rem;
 }
 
-.container__features{
-        margin-top: -2rem;
-        margin-bottom: 5rem;
-  
+.container__2{
+        margin-top: 4rem;
     }
 
 .container__content p{
             line-height: 1.65;
+            font-weight: 300;
             font-size: 1.125rem;
             margin: 1.8rem 0;
         }
@@ -642,8 +674,11 @@ img {
         .container__6{
             float: left;
             width: 50%;
-
         }
+
+            .container__6 p{
+                font-weight: 200;
+            }
 
 
         .container__4{
@@ -674,19 +709,42 @@ img {
         }}
 
 .card{
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.7);
     margin-top: 3rem;
     padding-top: 5rem;
     padding-left: 2rem;
     padding-right: 2rem;
-    height: 420px;
-    position: relative;
+    height: 370px;
+    text-align: center;
 }
+
+@media (min-width: 530px){
+
+.card{
+        height: 250px;
+}}
+
+@media (min-width: 800px){
+
+.card{
+        height: 570px;
+}}
+
+@media (min-width: 1200px){
+
+.card{
+        height: 370px;
+}}
 
 .card--header{
         border: solid 2px white;
-        position: absolute;
-        top:-5rem; left: 4rem;
+        border-radius: 15rem;
+        margin-top: -10rem;
+    }
+
+.card--text{
+        line-height: 1.65rem;
+        font-weight: 300;
     }
 
 .card--times{
