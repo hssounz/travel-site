@@ -22,7 +22,8 @@
     "gulp-svg-sprite": "^2.0.0",
     "jquery": "^3.6.1",
     "normalize.css": "^8.0.1",
-    "postcss-mixins": "^9.0.4"
+    "postcss-mixins": "^9.0.4",
+    "waypoints": "^4.0.1"
   },
   "devDependencies": {
     "@babel/preset-env": "^*",
