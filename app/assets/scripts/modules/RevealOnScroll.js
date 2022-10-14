@@ -1,5 +1,5 @@
 import $ from 'jquery';
-import waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
+import Waypoints from '../../../../node_modules/waypoints/lib/noframework.waypoints';
 
 
 export default class RevealOnScroll {
@@ -7,7 +7,6 @@ export default class RevealOnScroll {
     constructor() {
         this.features = document.querySelectorAll('#feature, .card');
         this.handleFeatures();
-
     }
 
 
