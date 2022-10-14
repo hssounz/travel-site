@@ -1,66 +1,129 @@
 .nav{
     padding: .5rem;
-    width: 100%;
-    height: auto;
-    position: fixed;
-    z-index: 5555;
-    background-color: #2f557276;
+    width: 94%;
+    height: 3rem;
+    position: absolute;
+    top: 0;
+    z-index: 2;
+    
+
+    @mixin atMedium{
+        background-color: #2f557290;
+        width: 99%
+    }
+
+
+
+    &__menu-content{
+        display:none;
+        position: absolute;
+        background-color: #2f557290;
+        top: 0; left: 50%; transform: translateX(-50%);
+
+        @mixin atMedium{
+            display: flex;
+            background-color: transparent;
+        }
+    }
+
+    &__visible{
+        display: block;
+    }
 
 
     &__img{
         background-color: $mainBlue;
-        width: 5rem;
-        padding: 2rem 1rem;
-        position: absolute; left: 8rem;
+        width: 8rem;
+        padding: 2rem 2rem;
+        position: absolute; 
+        left: 50%; top: 0;
+        z-index: 3;
+        transform: translateX(-50%) scale(.5);
+        transform-origin: 50% 0%;
+        
+
+        @mixin atMedium {
+            
+            transform : translateX(0);
+            left: 10%; top: 0;
+            
+        }
+
+ 
 
     }
 
     &__list{
-        font-size: 0.8rem;
-        float: right;
+        font-size: .4rem;
+        float: center;
         list-style: none;
         margin-top: 1rem;
-        margin-right: 5rem;
         display: flex;
-        float: right;
-        gap: 2rem;
+        gap: 1rem;
+        position: absolute; top: 0; right: -5rem;
+        
+
+
+        @mixin atMedium {
+            margin-right: 5rem;
+            font-size: 1rem;
+            float: right;
+
+        }
+
 
         a{  
-            padding: .5rem 2rem;
-            border: solid 1px transparent;
+            background-color: rgba(47, 79, 104, 0.92);
+            border-radius: .1rem;
             text-decoration: none;
             color: #fff;
-            font-weight: 300;
-           
-
-            &:hover{
-                border: solid 1px #fff;
-                border-radius: 18rem;
-                box-shadow: 0px 2px 0 $mainBlue;
-            }
+            font-weight: 400;
+            padding: .2rem 1rem;
             
+
+            @mixin atSmall{
+                padding: .5rem 1.5rem;
+                border: solid 1px transparent;  
+                background-color: transparent;
+            }
         }
     }
 
     &__btn{
         display: inline-block;
-        float: right;
-        margin-top: .5rem;
-        margin-right: 10rem;
+        width: 6rem;
+        margin-top: .4rem;
+        margin-right: 12rem;
         text-decoration: none;
         padding: .25rem .8rem;
-        font-size: 1.5rem;
+        text-align: center;
+        font-size: .8rem;
         color: #fff;
-        background-color: $mainBlue;
+        background-color: rgba(47, 79, 104, 0.92);
+        border-radius: .1rem;
 
-        &:hover{
-            background-color: transparent;
-            color: $mainBlue;
-        }
 
         @mixin atMedium{
-            padding: .5rem 1.8rem;
+            padding: .7rem 1.8rem;
             font-size: 1rem;
+            margin-right: 2rem;
+            float: right;
+            background-color: $mainBlue;
+            position: relative; top:0; left: 25rem;
+        }
+
+    }
+
+    &__menu-icon{
+        width: 25px; height: 25px;
+        background-color: #fff;
+        position: absolute;
+        top: 10px; right: 50px;
+        z-index: 5;
+        cursor: pointer;
+
+        @mixin atMedium{
+            display: none;
         }
     }
 }
