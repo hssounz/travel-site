@@ -76,8 +76,6 @@
 
 
     &__visible{
-        
-        /* display: block; */
         opacity: 1;
     }
 
@@ -108,46 +106,10 @@
 
 
     
-    @mixin atLarge {
-        position: absolute; top: 0;
-        background-color: #2f55727d;
-        z-index: 2;
-        width: 100%;
-        display: flex;
-        height: 3.5rem;
-    
-        &__img{
-            background-color: $mainBlue;
-            padding: 1.5rem; position: absolute; left: 12%;
-            z-index: 3;
-        }
-    
-        &__list{
-            list-style: none;
-            display: flex;
-            gap: 15%;
-            position: absolute; right: 40%;
-        }
-    
-        &__link{
-            text-decoration: none;
-            color: #fff;
-            font-size: 10rem;
-            padding: 2rem;
-        }
-    
-        &__btn{
-            color: #fff;
-            text-decoration: none;
-            position: absolute; right: 12%; top: 25%;
-            padding: .3rem 1.5rem;
-            font-size: 1rem;
-            background-color: $mainBlue;
-        }
-    }
+
 
     @mixin atMedium {
-        position: absolute; top: 0;
+        position: fixed; top: 0;
         background-color: #2f55727d;
         z-index: 2;
         width: 100%;
@@ -191,6 +153,43 @@
             font-size: .75rem;
             position: absolute; right: 8%; top: 20%;
             padding: .3rem 1.5rem;
+            background-color: $mainBlue;
+        }
+    }
+
+    @mixin atLarge {
+        position: fixed; top: 0;
+        background-color: #2f55727d;
+        z-index: 2;
+        width: 100%;
+        display: flex;
+        height: 4rem;
+    
+        &__img{
+            background-color: $mainBlue;
+            padding: 1.5rem; position: absolute; left: 12%;
+            z-index: 3;
+        }
+    
+        &__list{
+            list-style: none;
+            display: flex;
+            gap: 5%;
+            position: absolute; left: 35%; top: 0rem;
+        }
+    
+        &__link{
+            text-decoration: none;
+            color: #fff;
+            font-size: 1.2rem;
+        }
+    
+        &__btn{
+            color: #fff;
+            text-decoration: none;
+            position: absolute; right: 10%; top: 15%;
+            padding: .5rem 1.8rem;
+            font-size: 1.2rem;
             background-color: $mainBlue;
         }
     }
