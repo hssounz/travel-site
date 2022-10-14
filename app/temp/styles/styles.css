@@ -916,7 +916,7 @@ img {
         .nav__link{
             text-decoration: none;
             color: #fff;
-            font-size: 1rem;
+            font-size: 10rem;
             padding: 2rem;
         }
     
@@ -1108,6 +1108,15 @@ img {
         height: 42px;
         background-image: url('/temp/sprite/css/svg/sprite.css-d8cbb4f3.svg');
         background-position: 92.04013377926421% 86.35616438356163%;
+    }
+
+.reveal-item{
+    opacity: 0;
+    transition: opacity 1s ease-out;
+}
+
+.reveal-item--visibilee{
+        opacity: 1;
     }
 
 
