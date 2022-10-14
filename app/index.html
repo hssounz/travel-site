@@ -36,22 +36,25 @@
 
         <div class="nav__menu-content">
           <ul class="nav__list">
-            <li><a class="nav__link" href="#our-beginning">Beginnings</a></li>
-            <li><a class="nav__link" href="#features">Features</a></li>
-            <li><a class="nav__link" href="#testimonials">Testimonials</a></li>
+            <li><a class="nav__link" href="#our-beginning" id="beginnings-link">Beginnings</a></li>
+            <li><a class="nav__link" href="#features" id="features-link">Features</a></li>
+            <li><a class="nav__link" href="#testimonials" id="testo-link">Testimonials</a></li>
           </ul>
           <a class="nav__btn" href="#">Get in Touch</a>
         </div>
 
         <div class="nav__menu-content-mobile">
           <ul class="nav__list-mobile">
-            <li><a class="nav__link-mobile" href="#our-beginning">Beginnings</a></li>
+            <li>
+              <a class="nav__link-mobile" href="#our-beginning">Beginnings</a>
+            </li>
             <li><a class="nav__link-mobile" href="#features">Features</a></li>
-            <li><a class="nav__link-mobile" href="#testimonials">Testimonials</a></li>
+            <li>
+              <a class="nav__link-mobile" href="#testimonials">Testimonials</a>
+            </li>
           </ul>
           <a class="nav__btn-mobile" href="#">Get in Touch</a>
         </div>
-
       </div>
     </header>
 
@@ -89,7 +92,7 @@
       </div>
     </div>
 
-    <div class="page-section" id="our-beginning">
+    <div class="page-section" id="our-beginning" data-matching-link="#beginnings-link">
       <div class="wrapper">
         <h2 class="heading heading--centered">
           The first trip we planned
@@ -160,7 +163,7 @@
       </div>
     </div>
 
-    <div id="features" class="page-section page-section--blue">
+    <div id="features" class="page-section page-section--blue" data-matching-link="#features-link">
       <div class="wrapper">
         <h2 class="page-section--title">
           <img
@@ -231,8 +234,8 @@
         </div>
       </div>
     </div>
-    
-    <div id="testimonials" class="page-section page-section--trans">
+
+    <div id="testimonials" class="page-section page-section--trans" data-matching-link="#testo-link">
       <div class="wrapper wrapper__testo">
         <h2 class="page-section--title page-section--title-blue">
           <img

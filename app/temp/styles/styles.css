@@ -431,6 +431,10 @@ template {
             max-width: 30rem
     }}
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     font-family: 'Roboto', sans-serif;
     color: #333;
@@ -890,7 +894,7 @@ img {
 @media (min-width: 800px){
 
 .nav {
-        position: fixed; top: 0;
+        position: fixed; 
         background-color: #2f55727d;
         z-index: 2;
         width: 100%;
@@ -909,10 +913,15 @@ img {
         .nav__img{
             background-color: #2f5572;
             width: 6rem;
-            padding: 1.5rem; position: absolute; left: 8%;
+            padding: 1.5rem; position: absolute; left: 8%; top: 0;
             transform: translateX(0);
+            transition: transform .5s ease-out;
             z-index: 3;
         }
+
+            .nav__img-dark{
+                transform: scale(.46); position: absolute; top:-1.5rem;
+            }
     
         .nav__list{
             list-style: none;
@@ -936,12 +945,20 @@ img {
             position: absolute; right: 8%; top: 20%;
             padding: .3rem 1.5rem;
             background-color: #2f5572;
+        }
+
+        .nav__dark{
+            background-color: rgba(23, 51, 72, .85);
+        }
+
+        .nav__active{
+            color: #d59541;
         }}
 
 @media (min-width: 1200px){
 
 .nav {
-        position: fixed; top: 0;
+        position: fixed; 
         background-color: #2f55727d;
         z-index: 2;
         width: 100%;
@@ -953,6 +970,15 @@ img {
             background-color: #2f5572;
             padding: 1.5rem; position: absolute; left: 12%;
             z-index: 3;
+            transition: transform .5s ease-out;
+        }
+
+            .nav__img-dark{
+                transform: scale(.71); position: absolute; top: -.8rem; 
+            }
+
+        .nav__dark{
+            background-color: rgba(23, 51, 72, .85);
         }
     
         .nav__list{
@@ -975,6 +1001,10 @@ img {
             padding: .5rem 1.8rem;
             font-size: 1.2rem;
             background-color: #2f5572;
+        }
+
+        .nav__active{
+            color: #d59541;
         }}
 
 .footer{

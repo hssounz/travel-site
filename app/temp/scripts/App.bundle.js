@@ -11749,6 +11749,85 @@ https://github.com/imakewebthings/waypoints/blob/master/licenses.txt
 }())
 ;
 
+/***/ }),
+/* 5 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ RevealOnScroll)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _node_modules_waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(4);
+/* harmony import */ var _node_modules_waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_node_modules_waypoints_lib_noframework_waypoints__WEBPACK_IMPORTED_MODULE_1__);
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+
+var RevealOnScroll = /*#__PURE__*/function () {
+  function RevealOnScroll() {
+    var _this = this;
+    _classCallCheck(this, RevealOnScroll);
+    _defineProperty(this, "handleDark", function () {
+      var item = _this.nav;
+      var logo = document.querySelector(".nav__img");
+      new Waypoint({
+        element: item,
+        handler: function handler(direction) {
+          if (direction == 'down') {
+            item.classList.add('nav__dark');
+            logo.classList.add('nav__img-dark');
+          } else {
+            item.classList.remove('nav__dark');
+            logo.classList.remove('nav__img-dark');
+          }
+        },
+        offset: '-5%'
+      });
+    });
+    this.nav = document.querySelector(".nav");
+    this.navLinks = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".nav__link");
+    this.pageSections = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".page-section");
+    this.handleDark();
+    this.createPageSectionWaypoints();
+  }
+  _createClass(RevealOnScroll, [{
+    key: "createPageSectionWaypoints",
+    value: function createPageSectionWaypoints() {
+      var _this2 = this;
+      this.pageSections.each(function (index, item) {
+        var activeLink = item.getAttribute('data-matching-link');
+        new Waypoint({
+          element: item,
+          handler: function handler(direction) {
+            if (direction == 'down') {
+              _this2.navLinks.removeClass("nav__active");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(activeLink).addClass("nav__active");
+            }
+          },
+          offset: '18%'
+        });
+        new Waypoint({
+          element: item,
+          handler: function handler(direction) {
+            if (direction == 'up') {
+              _this2.navLinks.removeClass("nav__active");
+              jquery__WEBPACK_IMPORTED_MODULE_0___default()(activeLink).addClass("nav__active");
+            }
+          },
+          offset: '-60%'
+        });
+      });
+    }
+  }]);
+  return RevealOnScroll;
+}();
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -11825,10 +11904,13 @@ var __webpack_exports__ = {};
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
+/* harmony import */ var _modules_NavSticky__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+
 
 
 var menu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__["default"]();
 var revealOnScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"]();
+var navSticky = new _modules_NavSticky__WEBPACK_IMPORTED_MODULE_2__["default"]();
 })();
 
 /******/ })()
