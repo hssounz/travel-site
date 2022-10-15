@@ -2,16 +2,16 @@
 var path = require('path');
 
 module.exports = {
-    
-    // resolve: {
-    //     extensions: ['.js', '.jsx']  //Working
-    //   },
 
     mode: 'none',
-    entry: "./app/assets/scripts/App.js",
+
+    entry: {
+        App: "./app/assets/scripts/App.js",
+        Vendor: "./app/assets/scripts/Vendor.js",
+    },
     output: {
         path: path.resolve(__dirname, "./app/temp/scripts"),
-        filename: 'App.bundle.js',
+        filename: '[name].bundle.js',
     },
 
     module: {
