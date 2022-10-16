@@ -9,21 +9,21 @@ browserSync = require('browser-sync').create(),
 uglify = require('gulp-uglify');
 
 
-//Previewing our dist app
+//Previewing our docs app
 gulp.task('preview', () => {
 
     browserSync.init({
         notify: false,
         server: {
-            baseDir: "dist"
+            baseDir: "docs"
         }
     });
 
 })
 
-//DELETING DIST FOLDER FOR REBUILD
-gulp.task('deleteDistFolder', async  () => {
-    del('./dist/**');
+//DELETING docs FOLDER FOR REBUILD
+gulp.task('deleteDocsFolder', async  () => {
+    del('./docs/**');
 })
 
 //COPY GENERAL FILES
@@ -37,7 +37,7 @@ gulp.task('copy', () => {
         '!./app/temp/**',
     ]
     return gulp.src(paths)
-                .pipe(gulp.dest('./dist'))
+                .pipe(gulp.dest('./docs'))
 })
 
 // OPTIMIZING IMAGES FOR BUILD
@@ -48,7 +48,7 @@ gulp.task('optimizeIMG', () => {
                 interlaced: true,
                 multipass: true,
             }))
-                .pipe(gulp.dest('./dist/assets/images'));
+                .pipe(gulp.dest('./docs/assets/images'));
 });
 
 //COPY HTML, JS AND CSS FILES INTO BUILD
@@ -61,7 +61,7 @@ gulp.task('usemin', function() {
         inlinejs: [ uglify() ],
         inlinecss: [ cssnano() ]
       }))
-      .pipe(gulp.dest('./dist'));
+      .pipe(gulp.dest('./docs'));
   });
 
-gulp.task('build', gulp.series(['deleteDistFolder', 'copy', 'createSprite', 'copySpriteCss', 'optimizeIMG', 'createBundle', 'sass', 'usemin']) );
+gulp.task('build', gulp.series(['deleteDocsFolder', 'copy', 'createSprite', 'copySpriteCss', 'optimizeIMG', 'createBundle', 'sass', 'usemin']) );
