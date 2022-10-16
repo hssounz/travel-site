@@ -25,6 +25,7 @@
     "lazysizes": "^5.3.2",
     "normalize.css": "^8.0.1",
     "postcss-mixins": "^9.0.4",
+    "vanilla-lazyload": "^17.8.3",
     "waypoints": "^4.0.1"
   },
   "devDependencies": {

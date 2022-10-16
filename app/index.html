@@ -28,6 +28,7 @@
       <div class="nav">
         <img
           class="nav__img"
+          loading="lazy"
           src="assets/images/icons/clear-view-escapes.svg"
         />
         <div class="nav__menu-icon">
@@ -60,8 +61,8 @@
 
     <div class="large-hero">
       <picture>
-        <source
-          srcset="assets/images/hero--large-hi-dpi.jpg"
+        <source 
+          data-srcset="assets/images/hero--large-hi-dpi.jpg"
           media="(min-width: 1380px)"
         />
 
@@ -77,6 +78,7 @@
 
         <img
           class="large-hero__image"
+          loading="lazy"
           src="assets/images/hero--smaller.jpg"
           alt="coast vue of ocian and mountains"
         />
@@ -107,6 +109,7 @@
         <div class="wrapper wrapper--medium">
           <img
             class=""
+            loading="lazy"
             srcset="
               assets/images/first-trip.jpg         500w,
               assets/images/first-trip-hi-dpi.jpg 1200w,
@@ -127,6 +130,7 @@
               <img
                 srcset="assets/images/our-start-landscape-small.jpg"
                 alt="Our founder, Jane Doe"
+                loading="lazy"
               />
             </picture>
           </div>
@@ -238,7 +242,7 @@
     <div id="testimonials" class="page-section page-section--trans" data-matching-link="#testo-link">
       <div class="wrapper wrapper__testo">
         <h2 class="page-section--title page-section--title-blue">
-          <img
+          <img 
             class="page-section--title-icon"
             src="assets/images/icons/comment.svg"
           />
@@ -247,9 +251,11 @@
         <div class="container">
           <div class="container__4">
             <div class="card">
+
               <img
                 class="card--header"
-                src="assets/images/testimonial-jane.jpg"
+                loading="lazy"
+                srcset="assets/images/testimonial-jane.jpg"
               />
               <div class="card--content">
                 <h3 class="card--name">Jane Doe</h3>
@@ -269,8 +275,10 @@
             <div class="card">
               <img
                 class="card--header"
-                src="assets/images/testimonial-john.jpg"
+                loading="lazy"
+                srcset="assets/images/testimonial-john.jpg"
               />
+
               <div class="card--content">
                 <h3 class="card--name">John Smith</h3>
                 <h3 class="card--times">4 Time Escaper</h3>
@@ -288,7 +296,8 @@
             <div class="card">
               <img
                 class="card--header"
-                src="assets/images/testimonial-cat.jpg"
+                srcset="assets/images/testimonial-cat.jpg"
+                loading="lazy"
               />
               <div class="card--content">
                 <h3 class="card--name">Cat McKitty</h3>
