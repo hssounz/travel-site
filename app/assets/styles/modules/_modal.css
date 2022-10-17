@@ -1,0 +1,69 @@
+.modal{
+    position: fixed; top: 0; bottom: 0; right: 0; left: 0;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 5rem 0;
+    /* opacity: 0; visibility: hidden;
+    transform: scale(1.2);
+    transition: all .3s ease-out; */
+
+    &__description{
+        margin-top: -1rem;
+        font-size: 1rem;
+        text-align: center;
+        position: absolute; left: 50%; transform: translateX(-50%);
+        width: 22rem;
+ 
+
+        @mixin atMedium{
+            width: 28rem;
+            font-size: 1.5rem;
+            margin-top: -2rem;
+        }
+    }
+
+    &__social-icons{
+        z-index: 6;
+        position: absolute; left: 50%; top: 17rem; transform: translateX(-50%);
+        display: flex; gap: 1rem;
+
+        @mixin atMedium{
+            top: 21rem;
+        }
+    }
+
+    &__icon {
+        width: 72px; height: 72px;
+        background-color: $mainOrange; position: relative;
+
+        .icon{
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+    }
+
+    &__close{
+        position: absolute; top: 1rem; right: 1rem;
+        font-size: 2rem; transform: scaleX(1.5);
+    }
+
+    &__inner{
+        position: absolute;
+        top: 50%; left: 50%; transform: translateX(-50%) translateY(-140%);
+    }
+
+    &__link{
+        cursor: pointer;
+    }
+
+    &__visible{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
+
+
+}

@@ -1140,5 +1140,79 @@ img {
         opacity: 1;
     }
 
+.modal{
+    position: fixed; top: 0; bottom: 0; right: 0; left: 0;
+    z-index: 5;
+    background-color: rgba(255, 255, 255, 0.92);
+    padding: 5rem 0;
+
+
+
+}
+
+/* opacity: 0; visibility: hidden;
+    transform: scale(1.2);
+    transition: all .3s ease-out; */
+
+.modal__description{
+        margin-top: -1rem;
+        font-size: 1rem;
+        text-align: center;
+        position: absolute; left: 50%; transform: translateX(-50%);
+        width: 22rem;
+    }
+
+@media (min-width: 800px){
+
+.modal__description{
+            width: 28rem;
+            font-size: 1.5rem;
+            margin-top: -2rem
+    }}
+
+.modal__social-icons{
+        z-index: 6;
+        position: absolute; left: 50%; top: 17rem; transform: translateX(-50%);
+        display: flex; gap: 1rem;
+    }
+
+@media (min-width: 800px){
+
+.modal__social-icons{
+            top: 21rem
+    }}
+
+.modal__icon {
+        width: 72px; height: 72px;
+        background-color: #d59541; position: relative;
+
+    }
+
+.modal__icon .icon{
+            position: absolute;
+            left: 50%; top: 50%;
+            transform: translate(-50%, -50%);
+        }
+
+.modal__close{
+        position: absolute; top: 1rem; right: 1rem;
+        font-size: 2rem; transform: scaleX(1.5);
+    }
+
+.modal__inner{
+        position: absolute;
+        top: 50%; left: 50%; transform: translateX(-50%) translateY(-140%);
+    }
+
+.modal__link{
+        cursor: pointer;
+    }
+
+.modal__visible{
+        opacity: 1;
+        visibility: visible;
+        transform: scale(1);
+    }
+
 
 

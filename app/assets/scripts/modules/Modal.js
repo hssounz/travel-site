@@ -6,21 +6,26 @@ export default class Modal {
         this.modal = $('.modal');
         this.close = $('.modal__close');
         this.links = $(".modal__link");
-
+        console.log('test');
         this.events();
 
     }
 
     events = () => {
                 
-                this.links.each((index, link) => {
-                    link.on("click", () => {this.openModal(link)});
+
+              this.links.click(() => {
+                this.modal.show();
+              });
+
+                this.close.click(() => {
+                    this.modal.hide();
                 });
     }
 
-    openModal = (link) => {
-        console.log(link);
-    }
+    // openModal = (link) => {
+    //     console.log(link);
+    // }
     // events = () => {
         //opening the modal
 

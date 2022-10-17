@@ -11828,6 +11828,67 @@ var RevealOnScroll = /*#__PURE__*/function () {
 }();
 
 
+/***/ }),
+/* 6 */
+/***/ ((__unused_webpack_module, __webpack_exports__, __webpack_require__) => {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export */ __webpack_require__.d(__webpack_exports__, {
+/* harmony export */   "default": () => (/* binding */ Modal)
+/* harmony export */ });
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(2);
+/* harmony import */ var jquery__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(jquery__WEBPACK_IMPORTED_MODULE_0__);
+function _defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } }
+function _createClass(Constructor, protoProps, staticProps) { if (protoProps) _defineProperties(Constructor.prototype, protoProps); if (staticProps) _defineProperties(Constructor, staticProps); Object.defineProperty(Constructor, "prototype", { writable: false }); return Constructor; }
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
+var Modal = /*#__PURE__*/_createClass(function Modal() {
+  var _this = this;
+  _classCallCheck(this, Modal);
+  _defineProperty(this, "events", function () {
+    _this.links.click(function () {
+      _this.modal.show();
+    });
+    _this.close.click(function () {
+      _this.modal.hide();
+    });
+  });
+  this.modal = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.modal');
+  this.close = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.modal__close');
+  this.links = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".modal__link");
+  console.log('test');
+  this.events();
+}
+
+// openModal = (link) => {
+//     console.log(link);
+// }
+// events = () => {
+//opening the modal
+
+//     this.links.each((index, link) => {
+//         link.click(() => {
+//             console.log(link);
+//         });
+//     }
+// }
+
+//closing the modal
+// this.close.click(this.modalClose.bind(this))
+
+// modalOpen = () => {
+//     this.modal.addClass('modal__visibile');
+//     return false;
+// }
+
+// modalClose = () => {
+//     this.modal.removeClass('modal__visible');
+// }
+);
+
+
 /***/ })
 /******/ 	]);
 /************************************************************************/
@@ -11905,12 +11966,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(1);
 /* harmony import */ var _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(3);
 /* harmony import */ var _modules_NavSticky__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(5);
+/* harmony import */ var _modules_Modal__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(6);
+
 
 
 
 var menu = new _modules_MobileMenu__WEBPACK_IMPORTED_MODULE_0__["default"]();
 var revealOnScroll = new _modules_RevealOnScroll__WEBPACK_IMPORTED_MODULE_1__["default"]();
 var navSticky = new _modules_NavSticky__WEBPACK_IMPORTED_MODULE_2__["default"]();
+var modal = new _modules_Modal__WEBPACK_IMPORTED_MODULE_3__["default"]();
 })();
 
 /******/ })()
