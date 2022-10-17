@@ -4,6 +4,7 @@ export default class Modal {
  
     constructor(){
         this.modal = $('.modal');
+        this.modal.hide();
         this.close = $('.modal__close');
         this.links = $(".modal__link");
         console.log('test');

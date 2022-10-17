@@ -11856,6 +11856,7 @@ var Modal = /*#__PURE__*/_createClass(function Modal() {
     });
   });
   this.modal = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.modal');
+  this.modal.hide();
   this.close = jquery__WEBPACK_IMPORTED_MODULE_0___default()('.modal__close');
   this.links = jquery__WEBPACK_IMPORTED_MODULE_0___default()(".modal__link");
   console.log('test');

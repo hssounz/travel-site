@@ -44,9 +44,14 @@
 
     }
 
+    &__title{
+        color: $mainBlue;
+    }
+    
     &__close{
         position: absolute; top: 1rem; right: 1rem;
         font-size: 2rem; transform: scaleX(1.5);
+        cursor: pointer;
     }
 
     &__inner{

@@ -801,6 +801,12 @@ img {
         transition: opacity .7s ease-out;
     }
 
+@media (min-width: 800px){
+
+.nav__menu-content-mobile{
+            display: none
+    }}
+
 .nav__img{
         background-color: #2f5572;
         width: 4rem;
@@ -1194,9 +1200,14 @@ img {
             transform: translate(-50%, -50%);
         }
 
+.modal__title{
+        color: #2f5572;
+    }
+
 .modal__close{
         position: absolute; top: 1rem; right: 1rem;
         font-size: 2rem; transform: scaleX(1.5);
+        cursor: pointer;
     }
 
 .modal__inner{
